@@ -27,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/venables/node-where/issues"
   },
-  "homepage": "https://github.com/venables/node-where#readme"
+  "homepage": "https://github.com/venables/node-where#readme",
+  "dependencies": {
+    "lodash": "^3.10.0",
+    "request": "^2.60.0",
+    "validator": "^3.41.2"
+  }
 }

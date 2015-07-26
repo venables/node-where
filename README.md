@@ -15,17 +15,21 @@ Where can search by Postal Address or IP Address:
 ### Search by Postal Address:
 
 ```javascript
+var where = require('.');
 where.is('4 yawkey way boston ma', function(err, result) {
   if (result) {
-    console.log('Address: ' + result.address);
-    console.log('Street Number: ' + result.street_number);
-    console.log('Street: ' + result.street);
-    console.log('City: ' + result.city);
-    console.log('State: ' + result.state);
-    console.log('Zip: ' + result.postal_code);
-    console.log('Country: ' + result.country);
-    console.log('Lat: ' + result.lat);
-    console.log('Lng: ' + result.lng);
+    console.log('Address: ' + result.get('address'));
+    console.log('Street Number: ' + result.get('streetNumber'));
+    console.log('Street: ' + result.get('street'));
+    console.log('Full Street: ' + result.get('streetAddress'));
+    console.log('City: ' + result.get('city'));
+    console.log('State / Region: ' + result.get('region'));
+    console.log('State / Region Code: ' + result.get('regionCode'));
+    console.log('Zip: ' + result.get('postalCode'));
+    console.log('Country: ' + result.get('country'));
+    console.log('Country Code: ' + result.get('countryCode'));
+    console.log('Lat: ' + result.get('lat'));
+    console.log('Lng: ' + result.get('lng'));
   }
 });
 ```
@@ -35,10 +39,19 @@ where.is('4 yawkey way boston ma', function(err, result) {
 ```javascript
 where.is('173.194.33.104', function(err, result) {
   if (result) {
-    // ...
+    console.log('City: ' + result.get('city'));
+    console.log('State / Region: ' + result.get('region'));
+    console.log('State / Region Code: ' + result.get('regionCode'));
+    console.log('Zip: ' + result.get('postalCode'));
+    console.log('Country: ' + result.get('country'));
+    console.log('Country Code: ' + result.get('countryCode'));
+    console.log('Lat: ' + result.get('lat'));
+    console.log('Lng: ' + result.get('lng'));
   }
 });
 ```
+
+NOTE: IP address lookups do not include any street address information.
 
 ## Usage as Express middleware:
 
