@@ -1,6 +1,10 @@
 # node-where
 
+[![Dependency Status](https://david-dm.org/venables/node-where.png)](https://david-dm.org/venables/node-where)
+
 A basic geolocation library for node.js.
+
+Uses [freegeoip.net](http://freegeoip.net) and the [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/intro)
 
 ## Installation
 
@@ -10,12 +14,13 @@ npm install node-where --save
 
 ## Usage
 
-Where can search by Postal Address or IP Address:
+Where can search by Postal Address, landmark or IP Address:
 
 ### Search by Postal Address:
 
 ```javascript
-var where = require('.');
+var where = require('node-where');
+
 where.is('4 yawkey way boston ma', function(err, result) {
   if (result) {
     console.log('Address: ' + result.get('address'));
@@ -34,9 +39,25 @@ where.is('4 yawkey way boston ma', function(err, result) {
 });
 ```
 
-### Search by IP Address:
+### Search by Landmark:
 
 ```javascript
+var where = require('node-where');
+
+where.is('Fenway Park', function(err, result) {
+  if (result) {
+    // Same result as address search
+    // ...
+  }
+});
+```
+
+
+### Search by IP Address (both IPv4 and IPv6):
+
+```javascript
+var where = require('node-where');
+
 where.is('173.194.33.104', function(err, result) {
   if (result) {
     console.log('City: ' + result.get('city'));

@@ -4,6 +4,7 @@ var isIP = require('validator').isIP;
 var Address = require('./lib/address');
 var IP = require('./lib/ip');
 var request = require('request');
+var Result = require('./lib/result');
 
 /*
  * callback: fn(err, result);
@@ -12,7 +13,9 @@ var is = function(ipOrAddress, callback) {
   var locator;
   var opts;
 
-  if (isIP(ipOrAddress)) {
+  if (!ipOrAddress) {
+    return callback(null, new Result());
+  } else if (isIP(ipOrAddress)) {
     locator = new IP(ipOrAddress);
   } else {
     locator = new Address(ipOrAddress);
