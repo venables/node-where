@@ -1,0 +1,31 @@
+{
+  "name": "node-where",
+  "version": "1.0.0",
+  "description": "A very simple geolocation library in node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venables/node-where.git"
+  },
+  "keywords": [
+    "where",
+    "geolocation",
+    "geoip",
+    "ip",
+    "country",
+    "city",
+    "lat",
+    "lng",
+    "latitude",
+    "longitude"
+  ],
+  "author": "Matt Venables <mattvenables@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/venables/node-where/issues"
+  },
+  "homepage": "https://github.com/venables/node-where#readme"
+}
