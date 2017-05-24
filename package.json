@@ -29,12 +29,12 @@
   },
   "homepage": "https://github.com/venables/node-where#readme",
   "dependencies": {
-    "lodash": "^3.10.0",
-    "request": "^2.60.0",
-    "validator": "^3.41.2"
+    "lodash": "^4.17.4",
+    "request": "^2.81.0",
+    "validator": "^7.0.0"
   },
   "devDependencies": {
-    "chai": "^3.2.0",
-    "mocha": "^2.2.5"
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
   }
 }
