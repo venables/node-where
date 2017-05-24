@@ -1,6 +1,6 @@
 {
   "name": "node-where",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A very simple geolocation library in node.js",
   "main": "index.js",
   "scripts": {
