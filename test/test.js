@@ -37,8 +37,8 @@ describe('where.is', function() {
       expect(result.get('postalCode')).to.equal('94043');
       expect(result.get('country')).to.equal('United States');
       expect(result.get('countryCode')).to.equal('US');
-      expect(result.get('lat')).to.equal(37.419);
-      expect(result.get('lng')).to.equal(-122.058);
+      expect(result.get('lat')).to.equal(37.4192);
+      expect(result.get('lng')).to.equal(-122.0574);
       done();
     });
   });
