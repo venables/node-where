@@ -30,6 +30,7 @@
   "homepage": "https://github.com/venables/node-where#readme",
   "dependencies": {
     "lodash": "^4.17.4",
+    "parse-coordinates": "^0.1.0",
     "request": "^2.81.0",
     "validator": "^7.0.0"
   },
