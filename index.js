@@ -19,7 +19,7 @@ var is = function(ipOrAddress, callback) {
     return callback(null, new Result());
   } else if (isIP(ipOrAddress)) {
     locator = new IP(ipOrAddress);
-  } else if(isLatLong(ipOrAddress)){
+  } else if(isLatLong(ipOrAddress)) {
     locator = new LatLong(ipOrAddress);
   } else {
     locator = new Address(ipOrAddress);
