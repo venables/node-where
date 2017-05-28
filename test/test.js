@@ -80,4 +80,23 @@ describe('where.is', function() {
       done();
     });
   });
+
+  it('geolocates co-ordinates', function(done) {
+    var result = where.is('42.3466764,-71.0972178', function(err, result) {
+      expect(err).to.equal(null);
+      expect(result.get('address')).to.equal('24 Yawkey Way, Boston, MA, 02215, US');
+      expect(result.get('streetNumber')).to.equal('24');
+      expect(result.get('street')).to.equal('Yawkey Way');
+      expect(result.get('streetAddress')).to.equal('24 Yawkey Way');
+      expect(result.get('city')).to.equal('Boston');
+      expect(result.get('region')).to.equal('Massachusetts');
+      expect(result.get('regionCode')).to.equal('MA');
+      expect(result.get('postalCode')).to.equal('02215');
+      expect(result.get('country')).to.equal('United States');
+      expect(result.get('countryCode')).to.equal('US');
+      expect(result.get('lat')).to.equal(42.3466214);
+      expect(result.get('lng')).to.equal(-71.097143);
+      done();
+    });
+  });
 });

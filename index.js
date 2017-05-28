@@ -1,7 +1,9 @@
 'use strict';
 
 var isIP = require('validator').isIP;
+var isLatLong = require('parse-coordinates');
 var Address = require('./lib/address');
+var LatLong = require('./lib/lat-long');
 var IP = require('./lib/ip');
 var request = require('request');
 var Result = require('./lib/result');
@@ -17,6 +19,8 @@ var is = function(ipOrAddress, callback) {
     return callback(null, new Result());
   } else if (isIP(ipOrAddress)) {
     locator = new IP(ipOrAddress);
+  } else if(isLatLong(ipOrAddress)) {
+    locator = new LatLong(ipOrAddress);
   } else {
     locator = new Address(ipOrAddress);
   }
