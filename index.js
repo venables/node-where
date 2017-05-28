@@ -1,7 +1,7 @@
 'use strict';
 
 var isIP = require('validator').isIP;
-var isLatLong = require('./lib/lat-long-validator');
+var isLatLong = require('parse-coordinates');
 var Address = require('./lib/address');
 var LatLong = require('./lib/lat-long');
 var IP = require('./lib/ip');
